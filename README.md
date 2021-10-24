@@ -161,7 +161,7 @@ How does it work?
 =====
 The Django Translation Flags has a `CSS` file where all the most important languages flags are configured. 
 
-The avaliable flags are:
+The available flags are:
 
 `af`: Afrikaans, `ar`: Arabic, `az`: Azerbaijani, `de`: German, `en`: English, `en-au`: Australian English, `es`: Spanish, `es-ar`: Argentinian Spanish, `es-mx`: Mexican Spanish, `fr`: French, `hi`: Hindi, `hu`: Hungarian, `id`: Indonesian, `it`: Italian, `ja`: Japanese, `ko`: Korean, `nl`: Dutch (Nederlands), `pl`: Polish, `pt`: Portuguese, `pt-br`: Brazilian Portuguese, `ru`: Russian, `sv`: Swedish, `tr`: Turkish, `uk`: Ukrainian, `zh-cn`: Simplified Chinese, `zh-hans`: Simplified Chinese and `zh-hant`: Traditional Chinese.
 
@@ -183,12 +183,12 @@ Contributing
 #### Python
 
 1. Clone the repository.
-2. Create a virtualenv with Python 3.6 or 3.7
-3. Active the virtualenv.
+2. Create a virtualenv with Python 3.8
+3. Activate the virtualenv.
 4. Install the dependencies.
 6. Run the tests.
 
-```console
+```bash
 git clone https://github.com/silviolleite/django-translation-flags
 cd django-translation-flags
 python -m venv .venv
@@ -205,7 +205,7 @@ You will need of `node` and `npm` previously installed.
 2. Run the gulp
 3. Edit the less files: `/assets/less/`
 
-```console
+```bash
 npm install
 npm run build
 ```
