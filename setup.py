@@ -7,13 +7,14 @@ short_description = 'Internationalization with flags of main languages, ' \
                     'It lets easy to integrate the Django i18n in yours templates'
 
 # noinspection PyBroadException
-try:
-    # noinspection PyPackageRequirements
-    import pypandoc
-
-    long_description = pypandoc.convert_file('README.md', 'rst')
-except RuntimeError:
-    long_description = short_description
+# try:
+#     # noinspection PyPackageRequirements
+#     import pypandoc
+#
+#     long_description = pypandoc.convert_file('README.md', 'rst')
+# except RuntimeError:
+#     long_description = short_description
+long_description = short_description
 
 # allow setup.py to be run from any path
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
