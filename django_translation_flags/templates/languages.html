@@ -25,13 +25,14 @@
 </form>
 
 <script type="text/javascript">
-        if (window.location.hash){
-            var hash = window.location.hash;
-            document.getElementById('language').value = hash.replace('#', '');
-            document.getElementById('setlang').submit()
-        }
+    if (window.location.hash){
+        const hash = window.location.hash;
+        document.getElementById('language').value = hash.replace('#', '');
+        document.getElementById('setlang').submit()
+    }
+
     function set_language(language) {
-        $('input[name="language"]').val(language);
-        $('form#setlang').submit();
+        document.querySelector('input[name="language"]').value = language;
+        document.querySelector('form#setlang').submit();
     }
 </script>
