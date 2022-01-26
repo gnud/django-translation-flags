@@ -8,6 +8,48 @@
 
 This Django app provides integration for translation options in templates with some most common standard world languages. This is useful fow when you need to display language options in yours Django Apps. 
 
+Language Update procedure
+=====
+
+- Use the following [site](https://flagicons.lipis.dev/) to obtain new flags.
+- Put them in static/icons
+(in both directories, we don't case size at the moment).
+- Open list-icons.less and add the new language as:
+.flag-icon(LANGUAGENAMEHERE);
+
+    Automation:
+    
+    ```python
+    from django.conf import settings
+    
+    for l in settings.LANGUAGES:
+        print(f"""{l[0]}""")
+    ```
+    
+    That will print e.g:
+    ```less
+    .flag-icon(English);
+    .flag-icon(Macedonian);
+    .flag-icon(Albanian);
+    .flag-icon(Bulgarian);
+    .flag-icon(Croatian);
+    ```
+
+    For more languages use check here:
+    - http://www.i18nguy.com/unicode/language-identifiers.html
+    - https://github.com/django/django/blob/main/django/conf/global_settings.py
+    
+    TODO: automate even further by having a django command to generate flags for enabled languages in the sample Django project.
+
+- Run the npm run-script build or gulp dev.
+
+    **Note**: make sure static/css/django-translation-flags.min.css
+    has been modified in git, if not deleted and re-run gulp build.
+
+- Finally, increment the setup.py version.
+Then push changes.
+
+- In the destination project re-run the requirement.txt installation, this will update the package.
 
 Requirements
 =====
